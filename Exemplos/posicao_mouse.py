@@ -1,3 +1,4 @@
+from tkinter import messagebox
 import pyautogui
 import time
 
@@ -10,5 +11,9 @@ x, y = pyautogui.position()
 resp = pyautogui.onScreen(x, y)
 print("Está dentro da tela: " + (str(resp)))
 
-# Retorna a pposição atual do mmouse
+# Retorna a posição atual do mouse
 print("Posicao atual do mouse: x = " + str(x) + " e y = " + str(y))
+
+# Exibe a posição do mouse em uma messagebox
+messagebox.showinfo(title="Posição do mouse",
+                    message="Posicao atual do mouse: x = " + str(x) + " e y = " + str(y))
