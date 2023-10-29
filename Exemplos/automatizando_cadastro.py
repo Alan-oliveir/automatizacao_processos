@@ -13,7 +13,6 @@ time.sleep(5)
 
 
 # abre o arquivo csv contendo os dados dos membros da biblioteca
-# with open("/Exemplos/files/membros_biblioteca.csv") as f:
 with open("D:/Arquivos/GitHub/Automatizacao_Processos/Exemplos/files/membros_biblioteca.csv") as f:
     # pular a primeira linha do arquivo
     next(f)
