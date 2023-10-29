@@ -17,7 +17,13 @@ A automação de processos se refere ao emprego de tecnologias e sistemas comput
 - Segurança de Dados
 - Complexidade Técnica
 - Manutenção e Atualização
+___
 
 # Tecnologias utilizadas
-- Liguagem de Programação: Python
-- Bibliotecas: PyAutoGUI e Selenium
+
+#### Liguagem de Programação
+- [Python](https://www.python.org/)
+  
+#### Bibliotecas
+- [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
+- [Selenium](https://www.selenium.dev/)
