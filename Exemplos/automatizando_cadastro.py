@@ -1,6 +1,21 @@
 import pyautogui
 import time
 import cv2
+import os
+import logging
+
+# obtem o diretório do arquivo
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+# Configurar o logger
+logging.basicConfig(filename="application.log", level=logging.INFO,
+                    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+
+# informa o dirtório no arquivo de log
+logging.info("Local do arquivo: " + dir_path)
+
+# varável que armazena o número de registros
+count_register = 0
 
 pyautogui.PAUSE = 1
 pyautogui.FAILSAFE = True
@@ -8,12 +23,11 @@ pyautogui.FAILSAFE = True
 pyautogui.hotkey("win", "r")
 pyautogui.typewrite("https://forms.gle/otsFeQsiKjmhdnqC8 \n")
 
-# espera 5 segundos para a página carregar
+# espera 5 segundos para a página
 time.sleep(5)
 
-
 # abre o arquivo csv contendo os dados dos membros da biblioteca
-with open("D:/Arquivos/GitHub/Automatizacao_Processos/Exemplos/files/membros_biblioteca.csv") as f:
+with open(dir_path + "/files/membros_biblioteca.csv") as f:
     # pular a primeira linha do arquivo
     next(f)
 
@@ -24,7 +38,7 @@ with open("D:/Arquivos/GitHub/Automatizacao_Processos/Exemplos/files/membros_bib
         line = line.split(";")
 
         # imprime na tela os dados dos membros que foi cadastrado
-        print('Dados:', line)
+        print("Dados:", line)
         name = line[0]
         email = line[1]
         phone = line[2]
@@ -52,7 +66,7 @@ with open("D:/Arquivos/GitHub/Automatizacao_Processos/Exemplos/files/membros_bib
         pyautogui.typewrite(phone, interval=0.25)
 
         # tira uma captura de tela do formulário preenchido e salva com nome "cadastro_{nome}.png"
-        pyautogui.screenshot(f"cadastro_{name}.png")
+        pyautogui.screenshot(f"Exemplos/screenshots/cadastro_{name}.png")
 
         # clica no botão enviar
         pyautogui.click(pyautogui.locateCenterOnScreen(
@@ -65,6 +79,11 @@ with open("D:/Arquivos/GitHub/Automatizacao_Processos/Exemplos/files/membros_bib
         pyautogui.click(pyautogui.locateCenterOnScreen(
             "Exemplos/files/outrocadastro.png", confidence=0.8), duration=1)
 
+        # atualiza o número de registros
+        count_register += 1
+
+logging.info("Número de usuários registrados: " + count_register)
+logging.info("Programa finalizado com sucesso")
 
 # exibe uma mensagem de alerta, informando que o programa foi finalizado com sucesso
 pyautogui.alert(text="Programa finalizado com sucesso",
