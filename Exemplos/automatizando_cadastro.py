@@ -11,7 +11,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 logging.basicConfig(filename="application.log", level=logging.INFO,
                     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
-# informa o dirtório no arquivo de log
+# informa o diretório no arquivo de log
 logging.info("Local do arquivo: " + dir_path)
 
 # varável que armazena o número de registros
@@ -42,6 +42,12 @@ with open(dir_path + "/files/membros_biblioteca.csv") as f:
         name = line[0]
         email = line[1]
         phone = line[2]
+
+        log_dados = str("Nome: " + line[0]) + " Email: " + \
+            str(line[1]) + " Telefone:" + str(line[2])
+
+        # registra os dados no arquivo de log
+        logging.info("Dados - " + log_dados)
 
         # localizar na tela a imagem do campo "Nome", encontrar sua resposta e clicar nela
         pyautogui.locateCenterOnScreen(
@@ -82,9 +88,10 @@ with open(dir_path + "/files/membros_biblioteca.csv") as f:
         # atualiza o número de registros
         count_register += 1
 
-logging.info("Número de usuários registrados: " + count_register)
-logging.info("Programa finalizado com sucesso")
-
 # exibe uma mensagem de alerta, informando que o programa foi finalizado com sucesso
 pyautogui.alert(text="Programa finalizado com sucesso",
                 title="Aviso do sistema", button="OK")
+
+# registra as informações no arquivo de log
+logging.info("Numero de usuarios registrados: " + str(count_register))
+logging.info("Programa finalizado com sucesso")
