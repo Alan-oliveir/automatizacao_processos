@@ -22,7 +22,7 @@ A automação de processos se refere ao emprego de tecnologias e sistemas comput
 - Manutenção e Atualização
 ___
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 
 #### Liguagem de Programação
 - [Python](https://www.python.org/)
