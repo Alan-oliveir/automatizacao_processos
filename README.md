@@ -30,3 +30,13 @@ ___
 #### Bibliotecas
 - [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
 - [Selenium](https://www.selenium.dev/)
+___
+
+## Atividade desenvolvida no curso
+Aplicação python usando pyautogui para automatizar o preenchimento de registro de alunos em uma um programa desenvolvido com tkinter que é preenchido pelo usuário e depois salva os registros em um arquivo csv.
+
+## Agradecimentos
+
+- Curso - Automatizando Processos: Criando Bots com Python
+- Realização: Facti - https://qualifacti.facti.com.br/
+- Instrutora: Larissa de Oliveira Figueira
