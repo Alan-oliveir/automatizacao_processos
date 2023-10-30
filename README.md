@@ -2,7 +2,7 @@
 
 ### Sobre
 
-A automação de processos se refere ao emprego de tecnologias e sistemas computacionais para a execução automatizada de tarefas anteriormente realizadas por agentes humanos. Essa automação segue um conjunto predefinido de regras e procedimentos, com o intuito de aumentar a eficiência, minimizar erros e otimizar o desempenho operacional. A automação de processos permite que os recursos humanos sejam aplicados em atividades criativas e de maior valor ageregado. Sendo particularmente interessante a automação de tarefas repetitivas.
+A automação de processos se refere ao emprego de tecnologias e sistemas computacionais para a execução automatizada de tarefas anteriormente realizadas por agentes humanos. Essa automação segue um conjunto predefinido de regras e procedimentos, com o intuito de aumentar a eficiência, minimizar erros e otimizar o desempenho operacional. A automação de processos permite que os recursos humanos sejam aplicados em atividades criativas e de maior valor agregado. Sendo particularmente interessante a automação de tarefas repetitivas.
 
 ### Principais vantagens
 
