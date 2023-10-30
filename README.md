@@ -24,7 +24,7 @@ ___
 
 ## Tecnologias utilizadas
 
-#### Liguagem de Programação
+#### Linguagem de Programação
 - [Python](https://www.python.org/)
   
 #### Bibliotecas
